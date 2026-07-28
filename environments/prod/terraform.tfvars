@@ -1,0 +1,9 @@
+environment          = "prod"
+location             = "eastasia"
+node_count           = 2
+##vm_size              = "Standard_E2ads_v5"
+vm_size              = "standard_b2s_v2"
+kubernetes_version   = "1.35.6"
+app_replicas         = 2
+index_message        = "This is prod environment."
+namespace            = "prod-apps"
