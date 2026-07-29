@@ -75,6 +75,11 @@ terraform plan -out=tfplan
 # Apply configuration
 terraform apply tfplan
 ```
+##### Sample output of 'terraform plan' for uat
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfplan_uat.JPG?raw=true)
+
+##### Sample output of 'terraform apply' for uat
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfapply_uat.JPG?raw=true)
 
 ### PROD Environment
 ```bash
@@ -90,3 +95,8 @@ terraform plan -out=tfplan
 # Apply configuration
 terraform apply tfplan
 ```
+##### Sample output of 'terraform plan' for prod
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfplan_prod.JPG?raw=true)
+
+##### Sample output of 'terraform apply' for prod
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfapply_prod.JPG?raw=true)
