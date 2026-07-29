@@ -15,6 +15,15 @@ This tasks implements a modular Terraform solution for provisioning Azure Kubern
 ### Architecture Diagram
 ![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/architecture_diagram.jpg?raw=true)
 
+This architecture consists of 3 separate Azure Kubernetes Service (AKS) environments that host the same Apache HTTP Server (httpd) application:
+| Environment | Resource Group | AKS Nodes | httpd Replicas |
+|-------------|:---------------|:----------|:---------------|
+| Development | rg-aks-dev | 1 Node | 2 Replicas |
+| UAT | rg-aks-uat | 2 Nodes | 3 Replicas |
+| Production | rg-aks-prod | 3 Nodes | 6 Replicas |
+
+Traffic from users reaches the application through an Azure Load Balancer, which distributes request across the available Apache (httpd) pods running in each AKS Cluster.
+
 ## How To Deploy Each Environment
 
 ### DEV Environment
