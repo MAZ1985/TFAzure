@@ -127,3 +127,17 @@ This modular structure ensures reusability, consistency, and easy scaling across
 
 #### Sample of aks and kubernetes_app module structure
 ![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/module_structure.JPG?raw=true)
+
+
+
+## Assumptions & Decisions
+The node allocation for each environment is based on balancing cost efficiency, operational requirements, and system reliability.<br>
+The Development (Dev) environment uses a single node because its primary purpose is application development, debugging, and feature testing, where high availability is not critical and minimizing infrastructure costs is a priority. <br>
+The User Acceptance Testing (UAT) environment is provisioned with two nodes to better simulate a production-like setup while providing basic high availability, enabling more reliable testing of application behavior under realistic deployment conditions. <br>
+The Production (Prod) environment is configured with three nodes to ensure higher resilience, fault tolerance, and workload distribution, allowing the system to remain available even if one node fails. This approach assumes that development workloads are lightweight, UAT requires a representative environment for validation, and production demands continuous availability, scalability, and business continuity. <br><br>
+
+Region Selection: The East Asia region was selected because it is geographically close to Malaysia, with the assumption that this proximity would help reduce network latency and improve application responsiveness. <br>
+Public IP Limitation: Initially, the Azure subscription was limited to three public IP addresses, which was insufficient to deploy three Azure Kubernetes Service (AKS) clusters, as each AKS cluster requires at least two public IP addresses. This limitation was resolved by upgrading the Azure subscription from the Free tier to the Pay-As-You-Go plan, which allowed the public IP quota to be increased. <br>
+vCPU Quota Limitation: During deployment, a vCPU quota limitation was encountered for the selected virtual machine (VM) size. This issue was resolved by requesting and increasing the vCPU quota for the required VM size, enabling the successful provisioning of the AKS clusters. <br><br>
+
+An initial approach considered deploying the Azure Kubernetes Service (AKS) clusters within a private network to address the public IP limitation. Under this design, each AKS cluster would require only a single public IP address for the external load balancer, significantly reducing public IP consumption. However, this approach was ultimately not adopted because the assignment specifies that authentication to AKS should be performed using az login with a local kubeconfig. A private AKS cluster is not directly accessible from the public internet and would require additional infrastructure, such as an Azure Bastion host, VPN, ExpressRoute, or another secure connectivity solution, to interact with the Kubernetes API server. Introducing these components would increase the deployment complexity and go beyond the scope and assumptions of the assignment.
