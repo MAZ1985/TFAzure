@@ -55,10 +55,10 @@ terraform plan -out=tfplan
 # Apply configuration
 terraform apply tfplan
 ```
-#### Sample output of 'terraform plan' for dev
+##### Sample output of 'terraform plan' for dev
 ![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfplan_dev.JPG?raw=true)
 
-#### Sample output of 'terraform apply' for dev
+##### Sample output of 'terraform apply' for dev
 ![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfapply_dev.JPG?raw=true)
 
 ### UAT Environment
