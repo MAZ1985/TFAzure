@@ -61,6 +61,11 @@ terraform apply tfplan
 ##### Sample output of 'terraform apply' for dev
 ![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfapply_dev.JPG?raw=true)
 
+#### Result of successful deployment for dev environment
+Paste the public IP for dev environment into web browser and result should be seen as below.
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/dev_aks.JPG?raw=true)
+
+
 ### UAT Environment
 ```bash
 # Navigate to uat environment.
@@ -81,6 +86,11 @@ terraform apply tfplan
 ##### Sample output of 'terraform apply' for uat
 ![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfapply_uat.JPG?raw=true)
 
+#### Result of successful deployment for uat environment
+Paste the public IP for uat environment into web browser and result should be seen as below.
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/uat_aks.JPG?raw=true)
+
+
 ### PROD Environment
 ```bash
 # Navigate to prod environment.
@@ -100,3 +110,8 @@ terraform apply tfplan
 
 ##### Sample output of 'terraform apply' for prod
 ![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfapply_prod.JPG?raw=true)
+
+
+#### Result of successful deployment for prod environment
+Paste the public IP for prod environment into web browser and result should be seen as below.
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/prod_aks.JPG?raw=true)
