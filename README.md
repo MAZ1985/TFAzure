@@ -124,3 +124,6 @@ The environments directory contains separate configurations for dev, uat, and pr
 The modules directory contains self-contained building blocks: one module (aks) provisions the AKS cluster, and another (kubernetes_app) deploys the Apache application.<br>
 Each module has its own main.tf, variables.tf, and outputs.tf to define resources, accept inputs, and expose outputs.<br>
 This modular structure ensures reusability, consistency, and easy scaling across environments.
+
+### Sample of aks and kubernetes_app module structure
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/module_structure.JPG?raw=true)
