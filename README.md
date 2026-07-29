@@ -13,7 +13,7 @@ This tasks implements a modular Terraform solution for provisioning Azure Kubern
 
 ## Architecture Overview
 ### Architecture Diagram
-![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/architecture_diagram.jpg?raw=true)
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/architecture_diagram.jpg?raw=true)
 
 This architecture consists of 3 separate Azure Kubernetes Service (AKS) environments that host the same Apache HTTP Server (httpd) application:
 | Environment | Resource Group | AKS Nodes | httpd Replicas |
@@ -55,6 +55,11 @@ terraform plan -out=tfplan
 # Apply configuration
 terraform apply tfplan
 ```
+#### Sample output of 'terraform plan' for dev
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfplan_dev.JPG?raw=true)
+
+#### Sample output of 'terraform apply' for dev
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/tfapply_dev.JPG?raw=true)
 
 ### UAT Environment
 ```bash
