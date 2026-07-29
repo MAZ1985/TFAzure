@@ -38,11 +38,7 @@ resource "kubernetes_config_map_v1" "apache_config" {
           <div class="container">
               <h1>${var.index_message}</h1>
               <p>Environment: ${upper(var.environment)}</p>
-              <p>Server Time: <span id="time"></span></p>
           </div>
-          <script>
-              document.getElementById('time').textContent = new Date().toLocaleString();
-          </script>
       </body>
       </html>
     EOF
