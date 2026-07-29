@@ -11,6 +11,10 @@ This tasks implements a modular Terraform solution for provisioning Azure Kubern
 - **ConfigMap Based**: Environment-specific messages mounted as ConfigMaps
 - **Scalable**: Configurable node counts and replica sets per environment
 
+## Architecture Overview
+### Architecture Diagram
+![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/architecture_diagram.jpg?raw=true)
+
 ## How To Deploy Each Environment
 
 ### DEV Environment
