@@ -115,3 +115,12 @@ terraform apply tfplan
 #### Result of successful deployment for prod environment
 Paste the public IP for prod environment into web browser and result should be seen as below.
 ![image_alt](https://github.com/MAZ1985/TFAzure/blob/main/pictures/prod_aks.JPG?raw=true)
+
+
+
+## How Modules Are Structured
+Terraform code is organized into two main parts: environments and modules.<br>
+The environments directory contains separate configurations for dev, uat, and prod, each referencing reusable modules.<br>
+The modules directory contains self-contained building blocks: one module (aks) provisions the AKS cluster, and another (kubernetes_app) deploys the Apache application.<br>
+Each module has its own main.tf, variables.tf, and outputs.tf to define resources, accept inputs, and expose outputs.<br>
+This modular structure ensures reusability, consistency, and easy scaling across environments.
