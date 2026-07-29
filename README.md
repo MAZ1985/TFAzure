@@ -22,10 +22,10 @@ cd ~/TFAzure/environments/dev
 terraform init
 
 # Preview changes
-terraform plan -out=dev.tfplan
+terraform plan -out=tfplan
 
 # Apply configuration
-terraform apply dev.tfplan
+terraform apply tfplan
 ```
 
 ### UAT Environment
@@ -37,10 +37,10 @@ cd ~/TFAzure/environments/uat
 terraform init
 
 # Preview changes
-terraform plan -out=uat.tfplan
+terraform plan -out=tfplan
 
 # Apply configuration
-terraform apply uat.tfplan
+terraform apply tfplan
 ```
 
 ### PROD Environment
@@ -52,8 +52,8 @@ cd ~/TFAzure/environments/prod
 terraform init
 
 # Preview changes
-terraform plan -out=prod.tfplan
+terraform plan -out=tfplan
 
 # Apply configuration
-terraform apply prod.tfplan
+terraform apply tfplan
 ```
