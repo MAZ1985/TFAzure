@@ -25,19 +25,19 @@ This architecture consists of 3 separate Azure Kubernetes Service (AKS) environm
 Traffic from users reaches the application through an Azure Load Balancer, which distributes request across the available Apache (httpd) pods running in each AKS Cluster.
 
 #### Seperate AKS Environments
-Isolation: Development, testing, and production workloads are kept separate to prevent changes from affecting live applications.<br>
-Reliability: Applications are tested in Dev and UAT before being deployed to Production.<br>
-Cost Control: Resources can be sized appropriately for each environment's needs.
+Isolation - Development, testing, and production workloads are kept separate to prevent changes from affecting live applications.<br>
+Reliability - Applications are tested in Dev and UAT before being deployed to Production.<br>
+Cost Control - Resources can be sized appropriately for each environment's needs.
 
 #### Different Numbers of Nodes
-Dev (1 node): Minimal resources to reduce cost while supporting development activities.<br>
-UAT (2 nodes): Provides a more realistic testing environment and basic high availability.<br>
-Prod (3 nodes): Improves resilience, fault tolerance, and supports higher workloads.
+Dev (1 node) - Minimal resources to reduce cost while supporting development activities.<br>
+UAT (2 nodes) - Provides a more realistic testing environment and basic high availability.<br>
+Prod (3 nodes) - Improves resilience, fault tolerance, and supports higher workloads.
 
 #### Different Numbers of Replicas
-Dev (2 Replicas): Allows testing of application deployment and load balancing.<br>
-UAT (3 Replicas): Simulate production behavior and supports application validation.<br>
-Prod (6 Replicas): Ensures high availability, better performance, and the ability to handle more user traffic.
+Dev (2 Replicas) - Allows testing of application deployment and load balancing.<br>
+UAT (3 Replicas) - Simulate production behavior and supports application validation.<br>
+Prod (6 Replicas) - Ensures high availability, better performance, and the ability to handle more user traffic.
 
 ## How To Deploy Each Environment
 
