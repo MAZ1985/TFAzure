@@ -4,7 +4,7 @@
 
 This tasks implements a modular Terraform solution for provisioning Azure Kubernetes Service (AKS) clusters and deploying Apache web applications across three isolated environments: **dev**, **uat**, and **prod**.
 
-### 🎯 Key Features
+### Key Features
 - **Modular Design**: Reusable modules for AKS infrastructure and Kubernetes applications
 - **Environment Isolation**: Separate resource groups, clusters, and configurations per environment
 - **Load Balanced**: Each environment exposed via Azure Load Balancer
